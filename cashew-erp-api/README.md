@@ -1,21 +1,17 @@
-# Cashew ERP API #
-
-This repository contains code, configuration and other assets of Cashew Nut Processing Stages.
-
-
 # Cashew ERP System #
-
-Cashew ERP is a RESTful API for managing cashew processing data with secure authentication and batch data management.
+Cashew ERP is a RESTful API application built with Spring Boot for managing batch processing data and secure user authentication. This application uses an in-memory H2 database for easy setup and testing.
 
 # Features:
 
-(I) Secure authentication using JWT.
+(I) Secure authentication using JWT. Passwords hashed using BCrypt.
 
-(II) Batch data management for cashew intake and output tracking.
+(II) Create and retrieve batch processing data entries. Validations to ensure correct data input.
 
 (III) Pre-configured admin user.
 
-(IV) CORS support for frontend integration.
+(IV) Cross-Origin Resource Sharing (CORS) support for frontend integration.
+
+(V) H2 Database - In-memory mode for quick testing and easy setup. Supports optional file-based persistence for storing data.
 
 
 # Setup Instructions
@@ -40,8 +36,24 @@ Testing
         Email: admin@cashew.com
         
         Password: admin123
+
+# H2 Database Console
+Accessing the Console
+
+        URL: http://localhost:8080/h2-console
+        
+        JDBC URL: jdbc:h2:mem:koyya (or your custom file path if using file-based mode)
+
+        Username: sa
+        
+        Password: password
+        
+The H2 database console provides a web-based interface for running SQL queries and inspecting database tables.
+
 # Tech Stack
-1. Java 11
-2. Spring Boot
-3. Hibernate
-4. MySQL
+1. Backend: Java 11, Spring Boot
+2. Database: H2 (In-memory or File-based)
+3. ORM: Hibernate (Spring Data JPA)
+4. Security: Spring Security, JWT
+5. Build Tool: Maven
+6. Logging: SLF4J with LogbackL
