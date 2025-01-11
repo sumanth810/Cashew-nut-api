@@ -11,6 +11,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity representing an Admin user in the system.
+ */
 @Entity
 @Table(name = "admin")
 @Getter
@@ -19,11 +22,13 @@ import lombok.ToString;
 @ToString
 public class Admin {
 
+    // Primary key for the Admin entity, validated as an email
     @Id
     @Email
     @NotNull
     private String email;
 
+    // Password field for the Admin, cannot be null
     @NotNull
     private String password;
 }
