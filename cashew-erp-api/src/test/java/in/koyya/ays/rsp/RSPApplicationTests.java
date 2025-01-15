@@ -12,6 +12,7 @@ public class RSPApplicationTests {
 
 	@Test
 	public void shouldWork() {
-		assertEquals(10, 5+5);
+		// Simple test case to verify the Spring context loading
+		assertEquals(10, 5+5); // Assert that 5 + 5 equals 10
 	}
 }
